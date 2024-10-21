@@ -3,7 +3,15 @@
 Two hands-on examples for the SBX work meeting
 
 ## Running a whisper model on wombat
+Hint: Don't do this in you home folder to speed up everything
 
+1. Clone repository and enter container directory `git clone https://github.com/spraakbanken/work_meeting_autum_2024 && cd work_meeting_autumn_2024/whisper`
+2. Create virtual environment `virtualenv env && . ./env/bin/activate`
+3. Install pytorch `pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu121`
+4. Install all other dependencies `pip install -r requirements.txt`
+5. Download demo data `bash download.sh`
+6. Run transcription `LD_PRELOAD=./env/lib/python3.9/site-packages/nvidia/cudnn/lib/libcudnn.so.9 python transcribe.py input.mp3`
+   
 ## Deploying a container on demo
 
 1. Clone repository and enter container directory `git clone https://github.com/spraakbanken/work_meeting_autum_2024 && cd work_meeting_autumn_2024/container`
