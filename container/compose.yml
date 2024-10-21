@@ -1,0 +1,8 @@
+version: "3.8"
+services:
+  flask-container:
+    build: .
+    image: sbx/flask-container
+    command: ["/env/bin/flask", "--app", "app.app", "run", "--host", "0.0.0.0"]
+    ports:
+     - "5000:5000"
