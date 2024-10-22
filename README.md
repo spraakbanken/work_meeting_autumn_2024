@@ -3,7 +3,7 @@
 Two hands-on examples for the SBX work meeting
 
 ## Running a whisper model on wombat
-Hint: Don't do this in you home folder to speed up everything
+Hint: Don't do this in you home folder! Use e.g. `/var/tmp/<your_name>` instead. And don't forget to clean up!
 
 1. Clone repository and enter container directory `git clone https://github.com/spraakbanken/work_meeting_autumn_2024 && cd work_meeting_autumn_2024/whisper`
 2. touch .nobackup
