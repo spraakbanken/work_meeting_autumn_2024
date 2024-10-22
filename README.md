@@ -8,7 +8,7 @@ Hint: Don't do this in you home folder! Use e.g. `/var/tmp/<your_name>` instead.
 1. Clone repository and enter container directory `git clone https://github.com/spraakbanken/work_meeting_autumn_2024 && cd work_meeting_autumn_2024/whisper`
 2. touch .nobackup
 3. Create virtual environment `virtualenv env && . ./env/bin/activate` or `python -m venv env && source env/bin/activate`
-4. Install pytorch `pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu121`
+4. Install pytorch `pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu121` (You might have to use `TMP_DIR=/var/tmp pip` if you happen to run out of spae in `/tmp`) 
 5. Install all other dependencies `pip install -r requirements.txt`
 6. Download demo data `bash download.sh`
 7. Run transcription `LD_PRELOAD=./env/lib/python3.9/site-packages/nvidia/cudnn/lib/libcudnn.so.9 python transcribe.py input.mp3`
