@@ -17,10 +17,10 @@ Hint: Don't do this in you home folder! Use e.g. `/var/tmp/<your_name>` instead.
 
 1. Clone repository and enter container directory `git clone https://github.com/spraakbanken/work_meeting_autumn_2024 && cd work_meeting_autumn_2024/container`
 3. Build image `podman compose build
-4. Start container in the background `podman compose up -d
-5. Exclude from backup `touch ~/.local/share/containers/.nobackup
-6. Enable linger `loginctl enable-linger`
-7. create .htaccess file e.g. in /export/htdocs/herbert/container
+4. Start container in the background `podman compose up -d`
+5. Exclude from backup `touch ~/.local/share/containers/.nobackup`
+6. Enable linger, i.e. user processes are not automatically ended when logging out, `loginctl enable-linger`
+7. create .htaccess file e.g. in /export/htdocs/herbert/container`
 ```
 RewriteRule ^(.*)$ http://localhost:5000/$1 [P]
 Header edit* Location "http://localhost:5000/" "http://demo.spraakdata.gu.se/herbert/container"
